@@ -1,0 +1,52 @@
+2018-05-13 19:35:58,983 ERROR: Exception on /user/john [GET] [in /Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/kartikbehl/PycharmProjects/Blog/app/routes.py", line 72, in user
+    posts = Post.query.filter(user_id=current_user.id).all()
+TypeError: filter() got an unexpected keyword argument 'user_id'
+2018-05-13 19:38:57,807 INFO: Microblog startup [in /Users/kartikbehl/PycharmProjects/Blog/app/__init__.py:46]
+2018-05-13 19:42:07,462 INFO: Microblog startup [in /Users/kartikbehl/PycharmProjects/Blog/app/__init__.py:46]
+2018-05-13 19:42:16,678 INFO: Microblog startup [in /Users/kartikbehl/PycharmProjects/Blog/app/__init__.py:46]
+2018-05-13 19:42:25,408 ERROR: Exception on /index [GET] [in /Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/kartikbehl/PycharmProjects/Blog/app/routes.py", line 18, in index
+    posts = Post.query.filter_by(not_(Post.user_id.contains(current_user.id))).all()
+TypeError: filter_by() takes 1 positional argument but 2 were given
+2018-05-13 19:43:11,753 INFO: Microblog startup [in /Users/kartikbehl/PycharmProjects/Blog/app/__init__.py:46]
+2018-05-13 19:43:27,804 INFO: Microblog editProfile [in /Users/kartikbehl/PycharmProjects/Blog/app/routes.py:79]
+2018-05-13 19:43:29,487 INFO: Microblog editProfile [in /Users/kartikbehl/PycharmProjects/Blog/app/routes.py:79]
+2018-05-13 19:43:29,498 INFO: Microblog editProfile [in /Users/kartikbehl/PycharmProjects/Blog/app/routes.py:79]
+2018-05-13 19:43:33,251 INFO: Microblog logout [in /Users/kartikbehl/PycharmProjects/Blog/app/routes.py:47]
+2018-05-13 19:43:33,257 INFO: Microblog login [in /Users/kartikbehl/PycharmProjects/Blog/app/routes.py:24]
+2018-05-13 19:43:36,865 INFO: Microblog login [in /Users/kartikbehl/PycharmProjects/Blog/app/routes.py:24]
+2018-05-13 19:43:46,285 INFO: Microblog login [in /Users/kartikbehl/PycharmProjects/Blog/app/routes.py:24]
+2018-05-13 19:43:49,962 INFO: Microblog editProfile [in /Users/kartikbehl/PycharmProjects/Blog/app/routes.py:79]
+2018-05-13 19:43:52,209 INFO: Microblog logout [in /Users/kartikbehl/PycharmProjects/Blog/app/routes.py:47]
+2018-05-13 19:43:52,214 INFO: Microblog login [in /Users/kartikbehl/PycharmProjects/Blog/app/routes.py:24]

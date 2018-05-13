@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block uniquepage %}
+<table>
+    <tr>
+        <td><img src="{{user.avatar(128)}}"/></td>
+        <td>
+            <h2>User : {{user.name}}</h2>
+            {% if user.about_me %}
+            <p>{{user.about_me}}</p>
+            {% endif %}
+            {% if user.last_seen %}
+            <p><b>last seen : </b> {{user.last_seen}}</p>
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        {% if user == current_user %}
+        <td><a href="{{url_for('edit')}}">Edit Profile</a></td>
+        {% endif %}
+    </tr>
+</table>
+<hr>
+{% for post in posts%}
+<table>
+    <tr>
+        <td><img src="{{ post.author.avatar(64) }}"></td>
+        <td><b>{{post.author.name}} </b> : {{post.body}}</td>
+    </tr>
+</table>
+{% endfor %}
+{% endblock %}

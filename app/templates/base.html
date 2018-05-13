@@ -1,0 +1,32 @@
+<html>
+    <head>
+        {% if title %}
+        <title> {{title}} - Blog</title>
+        {% else %}
+        <title> Welcome to My Blog</title>
+        {% endif %}
+    </head>
+    <body>
+    <div style="background:black;color:white">
+        Blog :
+        <a  style="color:white" href="{{url_for('index')}}">Home</a>
+        {% if current_user.is_anonymous %}
+        <a  style="color:white" href="{{url_for('login')}}">Login</a>
+        {% else %}
+        <a  style="color:white" href="{{url_for('user',username=current_user.name)}}">Profile</a>
+        <a  style="color:white" href="{{url_for('logout')}}">Logout</a>
+        {% endif %}
+    </div>
+    <hr>
+   {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        {% block uniquepage %}{% endblock %}
+    </body>
+</html>

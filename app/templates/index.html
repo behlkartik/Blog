@@ -1,0 +1,18 @@
+
+{% extends "base.html" %}
+    {% block uniquepage %}
+        <h1>Hello, {{current_user.name}}!</h1>
+        <br>
+        {% if posts %}
+        {% for post in posts %}
+        <table>
+            <tr>
+                <td><img src="{{ post.author.avatar(64) }}"></td>
+                <td>{{post.author.name}}  : <b>{{post.body}}</b></td>
+            </tr>
+        </table>
+        {% endfor %}
+        {% else %}
+        <div><p>There are no new posts</p></div>
+        {% endif %}
+    {% endblock %}

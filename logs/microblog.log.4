@@ -1,0 +1,99 @@
+2018-05-13 19:04:10,654 ERROR: Exception on /edit_profile [GET] [in /Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/kartikbehl/PycharmProjects/Blog/app/routes.py", line 90, in edit
+    return render_template('edit.html', title='Edit Profile', form=form)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/kartikbehl/PycharmProjects/Blog/app/templates/edit.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/kartikbehl/PycharmProjects/Blog/app/templates/base.html", line 30, in top-level template code
+    {% block uniquepage %}{% endblock %}
+  File "/Users/kartikbehl/PycharmProjects/Blog/app/templates/edit.html", line 6, in block "uniquepage"
+    {{ form.hidden_tag() }}
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask_wtf/form.py", line 135, in hidden_tag
+    u'\n'.join(text_type(f) for f in hidden_fields(fields or self))
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask_wtf/form.py", line 135, in <genexpr>
+    u'\n'.join(text_type(f) for f in hidden_fields(fields or self))
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask_wtf/form.py", line 125, in hidden_fields
+    for f in fields:
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/wtforms/form.py", line 57, in __iter__
+    return iter(itervalues(self._fields))
+AttributeError: 'EditProfileForm' object has no attribute '_fields'
+2018-05-13 19:07:35,992 INFO: Microblog startup [in /Users/kartikbehl/PycharmProjects/Blog/app/__init__.py:46]
+2018-05-13 19:07:44,315 INFO: Microblog editProfile [in /Users/kartikbehl/PycharmProjects/Blog/app/routes.py:79]
+2018-05-13 19:07:44,322 ERROR: Exception on /edit_profile [GET] [in /Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/kartikbehl/PycharmProjects/Blog/app/routes.py", line 90, in edit
+    return render_template('edit.html', title='Edit Profile', form=form)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/kartikbehl/PycharmProjects/Blog/app/templates/edit.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/kartikbehl/PycharmProjects/Blog/app/templates/base.html", line 30, in top-level template code
+    {% block uniquepage %}{% endblock %}
+  File "/Users/kartikbehl/PycharmProjects/Blog/app/templates/edit.html", line 6, in block "uniquepage"
+    {{ form.hidden_tag() }}
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask_wtf/form.py", line 135, in hidden_tag
+    u'\n'.join(text_type(f) for f in hidden_fields(fields or self))
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask_wtf/form.py", line 135, in <genexpr>
+    u'\n'.join(text_type(f) for f in hidden_fields(fields or self))
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/flask_wtf/form.py", line 125, in hidden_fields
+    for f in fields:
+  File "/Users/kartikbehl/PycharmProjects/Blog/venv/lib/python3.6/site-packages/wtforms/form.py", line 57, in __iter__
+    return iter(itervalues(self._fields))
+AttributeError: 'EditProfileForm' object has no attribute '_fields'
+2018-05-13 19:12:06,431 INFO: Microblog startup [in /Users/kartikbehl/PycharmProjects/Blog/app/__init__.py:46]
+2018-05-13 19:12:10,051 INFO: Microblog editProfile [in /Users/kartikbehl/PycharmProjects/Blog/app/routes.py:79]
+2018-05-13 19:12:13,374 INFO: Microblog editProfile [in /Users/kartikbehl/PycharmProjects/Blog/app/routes.py:79]
+2018-05-13 19:12:17,552 INFO: Microblog editProfile [in /Users/kartikbehl/PycharmProjects/Blog/app/routes.py:79]
+2018-05-13 19:12:17,562 INFO: Microblog editProfile [in /Users/kartikbehl/PycharmProjects/Blog/app/routes.py:79]
+2018-05-13 19:12:19,822 INFO: Microblog editProfile [in /Users/kartikbehl/PycharmProjects/Blog/app/routes.py:79]
+2018-05-13 19:12:24,816 INFO: Microblog editProfile [in /Users/kartikbehl/PycharmProjects/Blog/app/routes.py:79]

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block uniquepage %}
+<h1> {{title}} </h1>
+<form method="post" action="">
+    {{ form.hidden_tag() }}
+    <p>
+        {{form.name.label}}
+        <br>
+        {{form.name(size=32)}}
+        <br>
+        {% for error in form.name.errors %}
+         <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{form.email.label}}
+        <br>
+        {{form.email()}}
+        <br>
+        {% for error in form.email.errors %}
+         <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{form.pwd.label}}
+        <br>
+        {{form.pwd()}}
+        <br>
+        {% for error in form.pwd.errors %}
+         <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+     <p>
+        {{form.pwd2.label}}
+        <br>
+        {{form.pwd2()}}
+        <br>
+        {% for error in form.pwd2.errors %}
+         <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{form.submit()}}
+    </p>
+
+</form>
+{% endblock %}
